@@ -34,8 +34,5 @@ RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x
 RUN npm install -g grunt-cli@0.1.13 \
 	&& npm cache clear
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
-
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
