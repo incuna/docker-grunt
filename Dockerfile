@@ -34,5 +34,6 @@ RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x
 RUN npm install -g grunt-cli@0.1.13 \
 	&& npm cache clear
 
+# Create folder to store and run the app
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
